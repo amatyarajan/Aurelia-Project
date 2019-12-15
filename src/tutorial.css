@@ -1,0 +1,16 @@
+.dropdown{
+  border: 5 px solid red;
+  padding: 10px 10px 50px 10px;
+  left: 200px;
+  top: 10px;
+  
+}
+
+.koribati{
+  display: flex;
+  direction: row;
+  align-items: center;
+  justify-content:space-between;
+  width: 500px;
+  height: 200px;
+}

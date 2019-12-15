@@ -1,0 +1,67 @@
+<template>
+    <require from="./main.css"></require>
+    <require from="./tutorial.css"></require>
+    <require from="./square"></require>
+  
+    <div square="red" style="position: center;"></div>
+    <div square="green"></div>
+    <div class='koribati'>
+        <div>
+            <h1>hello from index page</h1>
+           </div>
+           <div>
+             <h2>index ko baje</h2>
+             </div>          
+    </div>   
+       <div class="container">
+
+          <h3>Floating label <i class="material-icons">face</i></h3>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="bmd-label-floating">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1">
+            <span class="bmd-help">We'll never share your email with anyone else.</span>
+          </div>
+         
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+    <button click.trigger = "openModal()">OPEN MODAL</button>
+        <div>
+    <label for="greet" style="background-color:red; font-size: 2rem;">Would you like me to greet the world?</label>
+    </div>
+    <input type="checkbox" id="greet" checked.bind="greet">
+    <i class="material-icons" click.delegate="click">${yes ? 'arrow_drop_down' : 'arrow_right'}</i>
+    <div if.bind="yes" class.bind="classyes?'yesvalue':'novalue'">
+      <div if.bin="classyes">
+          Hello, World!
+      </div>
+      <div else>
+        Tero bau
+      </div>           
+    </div>
+<div>
+    <label>
+        Select product:<br>
+        <select value.bind="selectedProduct">
+          <option model.bind="null">Choose...</option>
+          <option repeat.for="product of products"
+                  model.bind="product">
+            ${product.id} - ${product.name}
+          </option>
+        </select>
+      </label>
+      Selected product ID: ${selectedProduct.name}
+</div>
+   
+   
+ <template>

@@ -1,0 +1,13 @@
+<template>
+    <require from="./chip.css"></require>
+
+    <div class="chip ${disabled ? 'disabled' : ''}" click.delegate="click()">
+        <i if.bind="onClick && !disabled" class="check-icon material-icons">
+            check
+        </i>
+        ${text}
+        <i if.bind="onClose" class="close-icon material-icons" click.delegate="close()">
+            close
+        </i>
+    </div>
+</template>

@@ -1,0 +1,23 @@
+<template>
+  <div style="height:20px; margin:10 10; padding:20 20 20">
+<p>Welcome todo page</p>
+  </div>
+
+<form submit.trigger="addTodo()">
+  <input type="text" value.bind="todoDescription">
+  <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
+</form>
+
+<div>
+  <ul>
+    <li repeat.for="todo of todos">
+      <input type="checkbox" checked.bind="todo.done">
+      <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
+        ${todo.description}
+      </span>
+      <button click.trigger="removeTodo(todo)">Remove</button>
+    </li>
+  </ul>
+</div>
+
+</template>

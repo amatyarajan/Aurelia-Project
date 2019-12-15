@@ -1,0 +1,14 @@
+<template>
+  <require from="./app.css"></require>
+    <nav>
+      <ul class="menu">
+         <li repeat.for = "row of router.navigation">
+            <a href.bind = "row.href">${row.title}</a>
+         </li>
+      </ul>
+   </nav>
+       
+    <router-view></router-view>
+</template>
+
+
